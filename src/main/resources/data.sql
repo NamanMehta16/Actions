@@ -1,0 +1,78 @@
+INSERT INTO product (
+    name,
+    description,
+    category,
+    brand,
+    release_date,
+    quantity,
+    price,
+    available,
+    image_name,
+    image_type,
+    image_data
+) VALUES
+(
+    'iPhone 16',
+    'Apple smartphone with A18 chip',
+    'Electronics',
+    'Apple',
+    '2026-01-15',
+    25,
+    89999.00,
+    true,
+    NULL,
+    NULL,
+    NULL
+),
+(
+    'Dell XPS 15',
+    '15-inch laptop with Intel Core Ultra 7',
+    'Computers',
+    'Dell',
+    '2025-11-20',
+    10,
+    154999.00,
+    true,
+    NULL,
+    NULL,
+    NULL
+),
+(
+    'Sony WH-1000XM6',
+    'Noise-cancelling wireless headphones',
+    'Accessories',
+    'Sony',
+    '2026-03-05',
+    40,
+    29999.00,
+    true,
+    NULL,
+    NULL,
+    NULL
+),
+(
+    'Nike Air Max',
+    'Comfortable running shoes',
+    'Footwear',
+    'Nike',
+    '2025-09-10',
+    60,
+    8999.00,
+    true,
+    NULL,
+    NULL,
+    NULL
+),
+(
+    'The Pragmatic Programmer',
+    'Classic software engineering book',
+    'Books',
+    'Addison-Wesley',
+    '2024-08-01',
+    100,
+    799.00,
+    true,
+    NULL,
+    NULL,
+    NULL
+);
