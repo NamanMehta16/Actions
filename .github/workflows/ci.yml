@@ -65,9 +65,9 @@ jobs:
       - name: Tag Docker image
         if: github.event_name == 'push'
         run: |
-          docker tag crud-app:latest ghcr.io/${{ github.repository_owner }}/crud-app:${{ github.sha }}
+          docker tag crud-app:latest ghcr.io/namanmehta16/crud-app:${{ github.sha }}
 
       - name: Push Docker image
         if: github.event_name == 'push'
         run: |
-          docker push ghcr.io/${{ github.repository_owner }}/crud-app:${{ github.sha }}
+          docker push ghcr.io/namanmehta16/crud-app:${{ github.sha }}
