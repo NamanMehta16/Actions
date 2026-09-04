@@ -16,12 +16,12 @@ jobs:
       mysql:
         image: mysql:8.0
         env:
-          MYSQL_ROOT_PASSWORD: ${{ secrets.DB_PASSWORD }}
+          MYSQL_ROOT_PASSWORD: test
           MYSQL_DATABASE: jdbc
         ports:
           - 3306:3306
         options: >-
-          --health-cmd="mysqladmin ping -h localhost -uroot -p$MYSQL_ROOT_PASSWORD"
+          --health-cmd="mysqladmin ping -h localhost -uroot -ptest"
           --health-interval=10s
           --health-timeout=5s
           --health-retries=5
@@ -29,7 +29,7 @@ jobs:
     env:
       DB_URL: jdbc:mysql://localhost:3306/jdbc
       DB_USERNAME: root
-      DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
+      DB_PASSWORD: test
 
     permissions:
       contents: read
@@ -57,7 +57,7 @@ jobs:
         with:
           registry: ghcr.io
           username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
+          password: ${{ github.token }}
 
       - name: Build Docker image
         run: docker compose build
